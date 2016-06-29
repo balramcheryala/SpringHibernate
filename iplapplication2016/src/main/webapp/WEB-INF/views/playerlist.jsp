@@ -5,7 +5,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>DD Team Info</title>
+<title>DD Player List</title>
 </head>
 <style>
 table {
@@ -42,29 +42,35 @@ table {
       border-right: none;
     }
   }
-}
+} -->
 </style>
+</head>
 <body>
 	<form action="playerlist" method="post">
 		<table border="1" cellpadding="2" width="70%">
 			<tr>
 				<th>NAME</th>
-				<th>COUCH</th>
-				<th>CAPTAIN</th>
-				<th>VENUEUE</th>
-				<th>OWNER</th>
-				<c:forEach var="dd" items="${ddteam}">
+				<th>ROLE</th>
+				<th>BATTING</th>
+				<th>BOWLING</th>
+				<th>NATION</th>
+				<th>DATE OF BIRTH</th>
+			</tr>
+			<c:forEach var="playerlist" items="${playerlist}">
 
-					<tr>
-						<td>${dd.name}</td>
-						<td>${dd.couch}</td>
-						<td>${dd.caption}</td>
-						<td>${dd.veneue}</td>
-						<td>${dd.owner}</td>
+				<tr>
+					<td>${playerlist.name}</td>
+					<td>${playerlist.role}</td>
+					<td>${playerlist.batting}</td>
+					<td>${playerlist.bowler}</td>
+					<td>${playerlist.nation}</td>
+					<td>${playerlist.dob}</td>
 
-					</tr>
+					<%-- <td><a href="editemp/${playerlist.id}">Edit</a></td>
+<td><a href="deleteemp/${playerlist.id}">Delete</a></td> --%>
+				</tr>
 
-				</c:forEach>
+			</c:forEach>
 		</table>
 		<br />
 </body>
