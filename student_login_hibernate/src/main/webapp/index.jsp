@@ -19,14 +19,12 @@
 }
 </style>
 <style>
-body {background-color:lightgrey;}
-h1   {color:blue;}
+h1   {color:#4CAF50;}
 p    {color:green;}
 </style>
 </head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<body bgcolor="skyblue">
-<h1><b>Student Registration Application Form</b></h1>
+<h1><b>Student Enrollment Application Form</b></h1>
 <form action="forms/loginform.html">
 <button type="submit"  class="button">Login User</button>
 </form>

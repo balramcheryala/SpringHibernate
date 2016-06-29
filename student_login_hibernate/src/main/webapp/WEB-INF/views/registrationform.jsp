@@ -6,9 +6,12 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 </head>
-<body bgcolor="lightgrey">
 <center>
-<h1 style="color:#000000;"><b>Student Registration Form</b></h1>
+<style>
+h1   {color:#4CAF50;}
+p    {color:green;}
+</style>
+<h1>Student Registration Form</h1>
 <form:form method="post" action="registrationform.html"  modelAttribute="registration"
 	commandName="registration">
 	<table>
