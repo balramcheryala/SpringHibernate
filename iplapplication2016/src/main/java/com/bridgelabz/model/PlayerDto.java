@@ -8,13 +8,13 @@ import javax.persistence.Table;
 @Entity
 @Table(name ="PlayerDB")
 public class PlayerDto {
-/*	
+
 	@Id
 	@GeneratedValue
 	@Column(name = "IpLID" )
-	private Long id;*/
-	@Id
-	@Column(name = "Name"  )
+	private Long id;
+	
+	@Column(name = "Name" ,unique=true, nullable=false  )
 	private String name;
 	@Column(name = "role" )
 	private String role;

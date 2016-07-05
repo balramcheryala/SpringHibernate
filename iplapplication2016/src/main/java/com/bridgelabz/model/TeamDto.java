@@ -9,13 +9,13 @@ import javax.persistence.Table;
 @Entity
 @Table(name ="TeamDB")
 public class TeamDto {
-/*
+
 	@Id
 	@GeneratedValue
 	@Column(name = "ID" )
-	private Long id;*/
-	@Id
-	@Column(name = "Name"  )
+	private Long id;
+	
+	@Column(name = "Name",unique=true, nullable=false )
 	private String name;
 	
 	@Column(name = "owner"  )

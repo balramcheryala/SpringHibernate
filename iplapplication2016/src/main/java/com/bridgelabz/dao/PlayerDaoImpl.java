@@ -48,7 +48,7 @@ public class PlayerDaoImpl implements PlayerDao{
 					player.setDob(jsonObjectArray.get("player_dob").toString());
 					
 					 array1.add(player);
-						/* //save  with transaction
+						 //save  with transaction
 					 System.out.println("Entered in try block of save");
 					 Session session = sessionFactory.openSession();
 					 Transaction tx1 = session.beginTransaction();
@@ -56,7 +56,7 @@ public class PlayerDaoImpl implements PlayerDao{
 					 System.out.println("Saved data");
 					 tx1.commit();
 					 session.close();
- */
+
 
 				}
 
@@ -68,6 +68,11 @@ public class PlayerDaoImpl implements PlayerDao{
 	
 		return array1;
 	}
+	
+	
+	
+	
+	
 	/*------gujrat player function------*/
 	public ArrayList gujratPlayerList() {
 		System.out.println("Gujrat list while be display shortly");
@@ -98,7 +103,7 @@ public class PlayerDaoImpl implements PlayerDao{
 					player.setDob(jsonObjectArray.get("player_dob").toString());
 					
 					 array1.add(player);
-						/* //save  with transaction
+					//save  with transaction
 					 System.out.println("Entered in try block of save");
 					 Session session = sessionFactory.openSession();
 					 Transaction tx1 = session.beginTransaction();
@@ -106,7 +111,7 @@ public class PlayerDaoImpl implements PlayerDao{
 					 System.out.println("Saved data");
 					 tx1.commit();
 					 session.close();
- */
+
 
 					
 				}
@@ -123,6 +128,13 @@ public class PlayerDaoImpl implements PlayerDao{
         	}
 		return array1;
 	}
+	
+	
+	
+	
+	
+	
+	
 	/*------punjab player function------*/
 	public ArrayList punjabPlayerList() {
 System.out.println("Gujrat list while be display shortly");
@@ -153,7 +165,7 @@ System.out.println("Gujrat list while be display shortly");
 					player.setDob(jsonObjectArray.get("player_dob").toString());
 					
 					 array1.add(player);
-						/* //save  with transaction
+					 //save  with transaction
 					 System.out.println("Entered in try block of save");
 					 Session session = sessionFactory.openSession();
 					 Transaction tx1 = session.beginTransaction();
@@ -161,7 +173,6 @@ System.out.println("Gujrat list while be display shortly");
 					 System.out.println("Saved data");
 					 tx1.commit();
 					 session.close();
- */
 
 					
 				}
@@ -179,6 +190,14 @@ System.out.println("Gujrat list while be display shortly");
 		return array1;
 	
 	}
+	
+	
+	
+	
+	
+	
+	
+	
 	/*------KKR player function------*/
 	public ArrayList kkrPlayerList() {
 System.out.println("Gujrat list while be display shortly");
@@ -209,7 +228,7 @@ System.out.println("Gujrat list while be display shortly");
 					player.setDob(jsonObjectArray.get("player_dob").toString());
 					
 					 array1.add(player);
-						/* //save  with transaction
+					 //save  with transaction
 					 System.out.println("Entered in try block of save");
 					 Session session = sessionFactory.openSession();
 					 Transaction tx1 = session.beginTransaction();
@@ -217,7 +236,7 @@ System.out.println("Gujrat list while be display shortly");
 					 System.out.println("Saved data");
 					 tx1.commit();
 					 session.close();
- */
+
 
 					
 				}
@@ -235,6 +254,9 @@ System.out.println("Gujrat list while be display shortly");
 		return array1;
 	
 	}
+	
+	
+	
 	/*------mumbai indians player function------*/
 	public ArrayList mumbaiPlayerList() {
 System.out.println("Gujrat list while be display shortly");
@@ -265,7 +287,7 @@ System.out.println("Gujrat list while be display shortly");
 					player.setDob(jsonObjectArray.get("player_dob").toString());
 					
 					 array1.add(player);
-						/* //save  with transaction
+				 //save  with transaction
 					 System.out.println("Entered in try block of save");
 					 Session session = sessionFactory.openSession();
 					 Transaction tx1 = session.beginTransaction();
@@ -273,7 +295,7 @@ System.out.println("Gujrat list while be display shortly");
 					 System.out.println("Saved data");
 					 tx1.commit();
 					 session.close();
- */
+
 
 					
 				}
@@ -291,6 +313,10 @@ System.out.println("Gujrat list while be display shortly");
 		return array1;
 	
 	}
+	
+	
+	
+	
 	/*------rising pune player function------*/
 	public ArrayList risingPunePlayerList() {
 System.out.println("Gujrat list while be display shortly");
@@ -321,7 +347,7 @@ System.out.println("Gujrat list while be display shortly");
 					player.setDob(jsonObjectArray.get("player_dob").toString());
 					
 					 array1.add(player);
-						/* //save  with transaction
+				 //save  with transaction
 					 System.out.println("Entered in try block of save");
 					 Session session = sessionFactory.openSession();
 					 Transaction tx1 = session.beginTransaction();
@@ -329,7 +355,7 @@ System.out.println("Gujrat list while be display shortly");
 					 System.out.println("Saved data");
 					 tx1.commit();
 					 session.close();
- */
+
 					
 				}
 				Iterator< PlayerDto> itr=array1.iterator();
@@ -345,6 +371,14 @@ System.out.println("Gujrat list while be display shortly");
         	}
 		return array1;
 		}
+	
+	
+	
+	
+	
+	
+	
+	
 	/*------royal challenge player function------*/
 	public ArrayList royalChallengesPlayerList() {
 System.out.println("Gujrat list while be display shortly");
@@ -375,7 +409,9 @@ System.out.println("Gujrat list while be display shortly");
 					player.setDob(jsonObjectArray.get("player_dob").toString());
 					
 					 array1.add(player);
-						/* //save  with transaction
+				
+					 
+					 //save  with transaction
 					 System.out.println("Entered in try block of save");
 					 Session session = sessionFactory.openSession();
 					 Transaction tx1 = session.beginTransaction();
@@ -383,7 +419,7 @@ System.out.println("Gujrat list while be display shortly");
 					 System.out.println("Saved data");
 					 tx1.commit();
 					 session.close();
- */
+ 
 
 					
 				}
@@ -401,6 +437,9 @@ System.out.println("Gujrat list while be display shortly");
 		return array1;
 	
 	}
+	
+	
+	
 	/*------Sunrise hydrabad player function------*/
 	public ArrayList sunriseHydrabadPlayerList() {
 System.out.println("Gujrat list while be display shortly");
@@ -431,7 +470,7 @@ System.out.println("Gujrat list while be display shortly");
 					player.setDob(jsonObjectArray.get("player_dob").toString());
 					
 					 array1.add(player);
-						/* //save  with transaction
+						 //save  with transaction
 					 System.out.println("Entered in try block of save");
 					 Session session = sessionFactory.openSession();
 					 Transaction tx1 = session.beginTransaction();
@@ -439,15 +478,6 @@ System.out.println("Gujrat list while be display shortly");
 					 System.out.println("Saved data");
 					 tx1.commit();
 					 session.close();
- */
-					 System.out.println("Entered in try block of save");
-					 Session session = sessionFactory.openSession();
-					 Transaction tx1 = session.beginTransaction();
-					 session.save(player);
-					 System.out.println("Saved data");
-					 tx1.commit();
-					 session.close();
-					
 				}
 				Iterator< PlayerDto> itr=array1.iterator();
 				while(itr.hasNext())
