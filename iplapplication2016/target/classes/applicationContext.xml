@@ -40,6 +40,8 @@
 			<property name="annotatedClasses">
 			<list>
 				  <value>com.bridgelabz.model.Users</value> <!-- Entity classes-->
+				   <value>com.bridgelabz.model.PlayerDto</value> 
+				   <value>com.bridgelabz.model.TeamDto</value>
 			</list>
 			</property>
       </bean>

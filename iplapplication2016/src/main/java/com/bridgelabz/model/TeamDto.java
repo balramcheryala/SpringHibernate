@@ -1,10 +1,35 @@
 package com.bridgelabz.model;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table(name ="TeamDB")
 public class TeamDto {
+/*
+	@Id
+	@GeneratedValue
+	@Column(name = "ID" )
+	private Long id;*/
+	@Id
+	@Column(name = "Name"  )
 	private String name;
+	
+	@Column(name = "owner"  )
 	private String owner;
+	
+	@Column(name = "couch"  )
 	private String couch;
+	
+	@Column(name = "caption"  )
 	private String caption;
+	
+	@Column(name = "veneue"  )
 	private String veneue;
+
 	public String getName() {
 		return name;
 	}

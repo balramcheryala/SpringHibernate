@@ -3,16 +3,38 @@ package com.bridgelabz.dao;
 import java.io.FileReader;
 import java.util.ArrayList;
 import java.util.Iterator;
+
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.Transaction;
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
-import org.springframework.core.env.SystemEnvironmentPropertySource;
+import org.springframework.beans.factory.annotation.Autowired;
 
 import com.bridgelabz.model.TeamDto;
 public class DelhiDareDevilsDaoImpl implements TeamDao {
+	@Autowired
+	static
+	SessionFactory sessionFactory;
+	
+	@SuppressWarnings("unused")
+	private static void save() {
+		
+		//save  with transaction
+		 System.out.println("Entered in try block of save");
+		 Session session = sessionFactory.openSession();
+		 Transaction tx1 = session.beginTransaction();
+		 TeamDto DDplayer = new TeamDto();
+		 session.save(DDplayer);
+		 System.out.println("Saved data");
+		 tx1.commit();
+		 session.close();
+	}
+	
 	public ArrayList<TeamDto> teamList() {
 	
-			System.out.println("Team list while be display shortly");
+			System.out.println("Diplaying Details of All Members");
 
 			ArrayList<TeamDto> array1 = new ArrayList<TeamDto>();
 			JSONParser parser = new JSONParser();
@@ -20,7 +42,7 @@ public class DelhiDareDevilsDaoImpl implements TeamDao {
 			try {
 
 				FileReader fileread = new FileReader(
-						"/home/bridgelabz/Documents/IPLTeamApp/src/main/jsonfile/IPLTeam/DDTeamInfo.json");
+						"/home/bridgelabz/Documents/iplapplication2016/src/main/jsonfile/IPLTeam/DDTeamInfo.json");
 
 				Object obj = parser.parse(fileread);
 				JSONArray array = (JSONArray) obj;
@@ -41,7 +63,10 @@ public class DelhiDareDevilsDaoImpl implements TeamDao {
 						DDplayer.setVeneue(jsonObjectArray.get("team_home_venue").toString());
 						DDplayer.setOwner(jsonObjectArray.get("team_owner").toString());
 
-						array1.add(DDplayer);
+							array1.add(DDplayer);
+							
+							//save();
+					
 					}
 					Iterator<TeamDto> itr = array1.iterator();
 					while (itr.hasNext()) {
@@ -59,7 +84,7 @@ public class DelhiDareDevilsDaoImpl implements TeamDao {
 
 	public ArrayList<TeamDto> gujratTeam() {
 		
-		System.out.println("Team list while be display shortly");
+		System.out.println("Diplaying Details of All Members");
 
 		ArrayList<TeamDto> array1 = new ArrayList<TeamDto>();
 		JSONParser parser = new JSONParser();
@@ -67,7 +92,7 @@ public class DelhiDareDevilsDaoImpl implements TeamDao {
 		try {
 
 			FileReader fileread = new FileReader(
-					"/home/bridgelabz/Documents/IPLTeamApp/src/main/jsonfile/IPLTeam/GujratTeam.json");
+					"/home/bridgelabz/Documents/iplapplication2016/src/main/jsonfile/IPLTeam/GujratTeam.json");
 
 			Object obj = parser.parse(fileread);
 			JSONArray array = (JSONArray) obj;
@@ -88,7 +113,8 @@ public class DelhiDareDevilsDaoImpl implements TeamDao {
 					DDplayer.setVeneue(jsonObjectArray.get("team_home_venue").toString());
 					DDplayer.setOwner(jsonObjectArray.get("team_owner").toString());
 
-					array1.add(DDplayer);
+						array1.add(DDplayer);
+						//save();
 				}
 				Iterator<TeamDto> itr = array1.iterator();
 				while (itr.hasNext()) {
@@ -102,8 +128,8 @@ public class DelhiDareDevilsDaoImpl implements TeamDao {
 		}
 	return array1;
 	}
-	public ArrayList punjabTeam() {
-		System.out.println("Team list while be display shortly");
+	public ArrayList<TeamDto> punjabTeam() {
+		System.out.println("Diplaying Details of All Members");
 
 		ArrayList<TeamDto> array1 = new ArrayList<TeamDto>();
 		JSONParser parser = new JSONParser();
@@ -111,7 +137,7 @@ public class DelhiDareDevilsDaoImpl implements TeamDao {
 		try {
 
 			FileReader fileread = new FileReader(
-					"/home/bridgelabz/Documents/IPLTeamApp/src/main/jsonfile/IPLTeam/PunjabTeam.json");
+					"/home/bridgelabz/Documents/iplapplication2016/src/main/jsonfile/IPLTeam/PunjabTeam.json");
 
 			Object obj = parser.parse(fileread);
 			JSONArray array = (JSONArray) obj;
@@ -132,7 +158,8 @@ public class DelhiDareDevilsDaoImpl implements TeamDao {
 					DDplayer.setVeneue(jsonObjectArray.get("team_home_venue").toString());
 					DDplayer.setOwner(jsonObjectArray.get("team_owner").toString());
 
-					array1.add(DDplayer);
+						array1.add(DDplayer);
+						//save();
 				}
 				Iterator<TeamDto> itr = array1.iterator();
 				while (itr.hasNext()) {
@@ -146,8 +173,8 @@ public class DelhiDareDevilsDaoImpl implements TeamDao {
 		}
 	return array1;
 	}
-	public ArrayList kkrTeam() {
-		System.out.println("Team list while be display shortly");
+	public ArrayList<TeamDto> kkrTeam() {
+		System.out.println("Diplaying Details of All Members");
 
 		ArrayList<TeamDto> array1 = new ArrayList<TeamDto>();
 		JSONParser parser = new JSONParser();
@@ -155,7 +182,7 @@ public class DelhiDareDevilsDaoImpl implements TeamDao {
 		try {
 
 			FileReader fileread = new FileReader(
-					"/home/bridgelabz/Documents/IPLTeamApp/src/main/jsonfile/IPLTeam/KKRTeam.json");
+					"/home/bridgelabz/Documents/iplapplication2016/src/main/jsonfile/IPLTeam/KKRTeam.json");
 
 			Object obj = parser.parse(fileread);
 			JSONArray array = (JSONArray) obj;
@@ -176,7 +203,8 @@ public class DelhiDareDevilsDaoImpl implements TeamDao {
 					DDplayer.setVeneue(jsonObjectArray.get("team_home_venue").toString());
 					DDplayer.setOwner(jsonObjectArray.get("team_owner").toString());
 
-					array1.add(DDplayer);
+						array1.add(DDplayer);
+					//save();
 				}
 				Iterator<TeamDto> itr = array1.iterator();
 				while (itr.hasNext()) {
@@ -190,8 +218,8 @@ public class DelhiDareDevilsDaoImpl implements TeamDao {
 		}
 	return array1;
 	}
-	public ArrayList mumbaiIndiansTeam() {
-		System.out.println("Team list while be display shortly");
+	public ArrayList<TeamDto> mumbaiIndiansTeam() {
+		System.out.println("Diplaying Details of All Members");
 
 		ArrayList<TeamDto> array1 = new ArrayList<TeamDto>();
 		JSONParser parser = new JSONParser();
@@ -199,7 +227,7 @@ public class DelhiDareDevilsDaoImpl implements TeamDao {
 		try {
 
 			FileReader fileread = new FileReader(
-					"/home/bridgelabz/Documents/IPLTeamApp/src/main/jsonfile/IPLTeam/MumbaiIndians.json");
+					"/home/bridgelabz/Documents/iplapplication2016/src/main/jsonfile/IPLTeam/MumbaiIndians.json");
 
 			Object obj = parser.parse(fileread);
 			JSONArray array = (JSONArray) obj;
@@ -220,7 +248,8 @@ public class DelhiDareDevilsDaoImpl implements TeamDao {
 					DDplayer.setVeneue(jsonObjectArray.get("team_home_venue").toString());
 					DDplayer.setOwner(jsonObjectArray.get("team_owner").toString());
 
-					array1.add(DDplayer);
+						array1.add(DDplayer);
+						//save();
 				}
 				Iterator<TeamDto> itr = array1.iterator();
 				while (itr.hasNext()) {
@@ -234,8 +263,8 @@ public class DelhiDareDevilsDaoImpl implements TeamDao {
 		}
 	return array1;
 	}
-	public ArrayList risingPuneTeam() {
-		System.out.println("Team list while be display shortly");
+	public ArrayList<TeamDto> risingPuneTeam() {
+		System.out.println("Diplaying Details of All Members");
 
 		ArrayList<TeamDto> array1 = new ArrayList<TeamDto>();
 		JSONParser parser = new JSONParser();
@@ -243,7 +272,7 @@ public class DelhiDareDevilsDaoImpl implements TeamDao {
 		try {
 
 			FileReader fileread = new FileReader(
-					"/home/bridgelabz/Documents/IPLTeamApp/src/main/jsonfile/IPLTeam/RisingPune.json");
+					"/home/bridgelabz/Documents/iplapplication2016/src/main/jsonfile/IPLTeam/RisingPune.json");
 
 			Object obj = parser.parse(fileread);
 			JSONArray array = (JSONArray) obj;
@@ -264,7 +293,8 @@ public class DelhiDareDevilsDaoImpl implements TeamDao {
 					DDplayer.setVeneue(jsonObjectArray.get("team_home_venue").toString());
 					DDplayer.setOwner(jsonObjectArray.get("team_owner").toString());
 
-					array1.add(DDplayer);
+						array1.add(DDplayer);
+						//save();
 				}
 				Iterator<TeamDto> itr = array1.iterator();
 				while (itr.hasNext()) {
@@ -278,8 +308,8 @@ public class DelhiDareDevilsDaoImpl implements TeamDao {
 		}
 	return array1;
 	}
-	public ArrayList royalChallengesTeam() {
-		System.out.println("Team list while be display shortly");
+	public ArrayList<TeamDto> royalChallengesTeam() {
+		System.out.println("Diplaying Details of All Members");
 
 		ArrayList<TeamDto> array1 = new ArrayList<TeamDto>();
 		JSONParser parser = new JSONParser();
@@ -287,7 +317,7 @@ public class DelhiDareDevilsDaoImpl implements TeamDao {
 		try {
 
 			FileReader fileread = new FileReader(
-					"/home/bridgelabz/Documents/IPLTeamApp/src/main/jsonfile/IPLTeam/RoyalChallenges.json");
+					"/home/bridgelabz/Documents/iplapplication2016/src/main/jsonfile/IPLTeam/RoyalChallenges.json");
 
 			Object obj = parser.parse(fileread);
 			JSONArray array = (JSONArray) obj;
@@ -308,7 +338,8 @@ public class DelhiDareDevilsDaoImpl implements TeamDao {
 					DDplayer.setVeneue(jsonObjectArray.get("team_home_venue").toString());
 					DDplayer.setOwner(jsonObjectArray.get("team_owner").toString());
 
-					array1.add(DDplayer);
+						array1.add(DDplayer);
+						//save();
 				}
 				Iterator<TeamDto> itr = array1.iterator();
 				while (itr.hasNext()) {
@@ -322,8 +353,8 @@ public class DelhiDareDevilsDaoImpl implements TeamDao {
 		}
 	return array1;
 	}
-	public ArrayList sunriseHydrabadTeam() {
-		System.out.println("Team list while be display shortly");
+	public ArrayList<TeamDto> sunriseHydrabadTeam() {
+		System.out.println("Diplaying Details of All Members");
 
 		ArrayList<TeamDto> array1 = new ArrayList<TeamDto>();
 		JSONParser parser = new JSONParser();
@@ -331,7 +362,7 @@ public class DelhiDareDevilsDaoImpl implements TeamDao {
 		try {
 
 			FileReader fileread = new FileReader(
-					"/home/bridgelabz/Documents/IPLTeamApp/src/main/jsonfile/IPLTeam/SunriseHydrabad.json");
+					"/home/bridgelabz/Documents/iplapplication2016/src/main/jsonfile/IPLTeam/SunriseHydrabad.json");
 
 			Object obj = parser.parse(fileread);
 			JSONArray array = (JSONArray) obj;
@@ -352,7 +383,8 @@ public class DelhiDareDevilsDaoImpl implements TeamDao {
 					DDplayer.setVeneue(jsonObjectArray.get("team_home_venue").toString());
 					DDplayer.setOwner(jsonObjectArray.get("team_owner").toString());
 
-					array1.add(DDplayer);
+						array1.add(DDplayer);
+						//save();
 				}
 				Iterator<TeamDto> itr = array1.iterator();
 				while (itr.hasNext()) {

@@ -3,32 +3,38 @@ package com.bridgelabz.dao;
 import java.io.FileReader;
 import java.util.ArrayList;
 import java.util.Iterator;
-import java.util.List;
+
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.Transaction;
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
 import com.bridgelabz.model.PlayerDto;
 @Repository
 public class PlayerDaoImpl implements PlayerDao{
-
+	
+	@Autowired
+	SessionFactory sessionFactory;
 	public ArrayList<PlayerDto> printList() {
-		System.out.println("list while be display shortly");
+		System.out.println("Retriving the List ");
 		
 		ArrayList<PlayerDto> array1=new ArrayList<PlayerDto>();
         JSONParser parser= new JSONParser();
         
         try {
         	
-        	FileReader fileread=new FileReader("/home/bridgelabz/Documents/IPLTeamApp/src/main/jsonfile/IPLPlayer/jsonfile.json");
+        	FileReader fileread=new FileReader("/home/bridgelabz/Documents/iplapplication2016/src/main/jsonfile/IPLPlayer/jsonfile.json");
         	
         	Object obj=parser.parse(fileread);
         	JSONArray array =(JSONArray)obj;
         	
         	for (int i = 0; i < array.size(); i++) {
 				JSONObject jsonObject=(JSONObject)array.get(i);
-				String name=jsonObject.get("Name").toString();
+				jsonObject.get("Name").toString();
 				JSONArray jsonArray=(JSONArray)jsonObject.get("PlayerList");
 				
 				for (int j = 0; j < jsonArray.size(); j++) {
@@ -42,14 +48,18 @@ public class PlayerDaoImpl implements PlayerDao{
 					player.setDob(jsonObjectArray.get("player_dob").toString());
 					
 					 array1.add(player);
-					
+						/* //save  with transaction
+					 System.out.println("Entered in try block of save");
+					 Session session = sessionFactory.openSession();
+					 Transaction tx1 = session.beginTransaction();
+					 session.save(player);
+					 System.out.println("Saved data");
+					 tx1.commit();
+					 session.close();
+ */
+
 				}
-				/*Iterator< PlayerDto> itr=array1.iterator();
-				while(itr.hasNext())
-				{
-					System.out.println(itr.next());
-					
-				}*/
+
         	}
         }
         	catch (Exception e) {
@@ -67,7 +77,7 @@ public class PlayerDaoImpl implements PlayerDao{
         
         try {
         	
-        	FileReader fileread=new FileReader("/home/bridgelabz/Documents/IPLTeamApp/src/main/jsonfile/IPLPlayer/GujratLionPlayer.json");
+        	FileReader fileread=new FileReader("/home/bridgelabz/Documents/iplapplication2016/src/main/jsonfile/IPLPlayer/GujratLionPlayer.json");
         	
         	Object obj=parser.parse(fileread);
         	JSONArray array =(JSONArray)obj;
@@ -88,6 +98,16 @@ public class PlayerDaoImpl implements PlayerDao{
 					player.setDob(jsonObjectArray.get("player_dob").toString());
 					
 					 array1.add(player);
+						/* //save  with transaction
+					 System.out.println("Entered in try block of save");
+					 Session session = sessionFactory.openSession();
+					 Transaction tx1 = session.beginTransaction();
+					 session.save(player);
+					 System.out.println("Saved data");
+					 tx1.commit();
+					 session.close();
+ */
+
 					
 				}
 				Iterator< PlayerDto> itr=array1.iterator();
@@ -112,7 +132,7 @@ System.out.println("Gujrat list while be display shortly");
         
         try {
         	
-        	FileReader fileread=new FileReader("/home/bridgelabz/Documents/IPLTeamApp/src/main/jsonfile/IPLPlayer/punjabPlayer.json");
+        	FileReader fileread=new FileReader("/home/bridgelabz/Documents/iplapplication2016/src/main/jsonfile/IPLPlayer/punjabPlayer.json");
         	
         	Object obj=parser.parse(fileread);
         	JSONArray array =(JSONArray)obj;
@@ -133,6 +153,16 @@ System.out.println("Gujrat list while be display shortly");
 					player.setDob(jsonObjectArray.get("player_dob").toString());
 					
 					 array1.add(player);
+						/* //save  with transaction
+					 System.out.println("Entered in try block of save");
+					 Session session = sessionFactory.openSession();
+					 Transaction tx1 = session.beginTransaction();
+					 session.save(player);
+					 System.out.println("Saved data");
+					 tx1.commit();
+					 session.close();
+ */
+
 					
 				}
 				Iterator< PlayerDto> itr=array1.iterator();
@@ -158,7 +188,7 @@ System.out.println("Gujrat list while be display shortly");
         
         try {
         	
-        	FileReader fileread=new FileReader("/home/bridgelabz/Documents/IPLTeamApp/src/main/jsonfile/IPLPlayer/KKRPlayer.json");
+        	FileReader fileread=new FileReader("/home/bridgelabz/Documents/iplapplication2016/src/main/jsonfile/IPLPlayer/KKRPlayer.json");
         	
         	Object obj=parser.parse(fileread);
         	JSONArray array =(JSONArray)obj;
@@ -179,6 +209,16 @@ System.out.println("Gujrat list while be display shortly");
 					player.setDob(jsonObjectArray.get("player_dob").toString());
 					
 					 array1.add(player);
+						/* //save  with transaction
+					 System.out.println("Entered in try block of save");
+					 Session session = sessionFactory.openSession();
+					 Transaction tx1 = session.beginTransaction();
+					 session.save(player);
+					 System.out.println("Saved data");
+					 tx1.commit();
+					 session.close();
+ */
+
 					
 				}
 				Iterator< PlayerDto> itr=array1.iterator();
@@ -204,7 +244,7 @@ System.out.println("Gujrat list while be display shortly");
         
         try {
         	
-        	FileReader fileread=new FileReader("/home/bridgelabz/Documents/IPLTeamApp/src/main/jsonfile/IPLPlayer/MumbaiPlayer.json");
+        	FileReader fileread=new FileReader("/home/bridgelabz/Documents/iplapplication2016/src/main/jsonfile/IPLPlayer/MumbaiPlayer.json");
         	
         	Object obj=parser.parse(fileread);
         	JSONArray array =(JSONArray)obj;
@@ -225,6 +265,16 @@ System.out.println("Gujrat list while be display shortly");
 					player.setDob(jsonObjectArray.get("player_dob").toString());
 					
 					 array1.add(player);
+						/* //save  with transaction
+					 System.out.println("Entered in try block of save");
+					 Session session = sessionFactory.openSession();
+					 Transaction tx1 = session.beginTransaction();
+					 session.save(player);
+					 System.out.println("Saved data");
+					 tx1.commit();
+					 session.close();
+ */
+
 					
 				}
 				Iterator< PlayerDto> itr=array1.iterator();
@@ -250,7 +300,7 @@ System.out.println("Gujrat list while be display shortly");
         
         try {
         	
-        	FileReader fileread=new FileReader("/home/bridgelabz/Documents/IPLTeamApp/src/main/jsonfile/IPLPlayer/RisingPunePlayer.json");
+        	FileReader fileread=new FileReader("/home/bridgelabz/Documents/iplapplication2016/src/main/jsonfile/IPLPlayer/RisingPunePlayer.json");
         	
         	Object obj=parser.parse(fileread);
         	JSONArray array =(JSONArray)obj;
@@ -271,6 +321,15 @@ System.out.println("Gujrat list while be display shortly");
 					player.setDob(jsonObjectArray.get("player_dob").toString());
 					
 					 array1.add(player);
+						/* //save  with transaction
+					 System.out.println("Entered in try block of save");
+					 Session session = sessionFactory.openSession();
+					 Transaction tx1 = session.beginTransaction();
+					 session.save(player);
+					 System.out.println("Saved data");
+					 tx1.commit();
+					 session.close();
+ */
 					
 				}
 				Iterator< PlayerDto> itr=array1.iterator();
@@ -295,7 +354,7 @@ System.out.println("Gujrat list while be display shortly");
         
         try {
         	
-        	FileReader fileread=new FileReader("/home/bridgelabz/Documents/IPLTeamApp/src/main/jsonfile/IPLPlayer/RoyalChallenges.json");
+        	FileReader fileread=new FileReader("/home/bridgelabz/Documents/iplapplication2016/src/main/jsonfile/IPLPlayer/RoyalChallenges.json");
         	
         	Object obj=parser.parse(fileread);
         	JSONArray array =(JSONArray)obj;
@@ -316,6 +375,16 @@ System.out.println("Gujrat list while be display shortly");
 					player.setDob(jsonObjectArray.get("player_dob").toString());
 					
 					 array1.add(player);
+						/* //save  with transaction
+					 System.out.println("Entered in try block of save");
+					 Session session = sessionFactory.openSession();
+					 Transaction tx1 = session.beginTransaction();
+					 session.save(player);
+					 System.out.println("Saved data");
+					 tx1.commit();
+					 session.close();
+ */
+
 					
 				}
 				Iterator< PlayerDto> itr=array1.iterator();
@@ -341,7 +410,7 @@ System.out.println("Gujrat list while be display shortly");
         
         try {
         	
-        	FileReader fileread=new FileReader("/home/bridgelabz/Documents/IPLTeamApp/src/main/jsonfile/IPLPlayer/SunriseHydrabad.json");
+        	FileReader fileread=new FileReader("/home/bridgelabz/Documents/iplapplication2016/src/main/jsonfile/IPLPlayer/SunriseHydrabad.json");
         	
         	Object obj=parser.parse(fileread);
         	JSONArray array =(JSONArray)obj;
@@ -362,6 +431,22 @@ System.out.println("Gujrat list while be display shortly");
 					player.setDob(jsonObjectArray.get("player_dob").toString());
 					
 					 array1.add(player);
+						/* //save  with transaction
+					 System.out.println("Entered in try block of save");
+					 Session session = sessionFactory.openSession();
+					 Transaction tx1 = session.beginTransaction();
+					 session.save(player);
+					 System.out.println("Saved data");
+					 tx1.commit();
+					 session.close();
+ */
+					 System.out.println("Entered in try block of save");
+					 Session session = sessionFactory.openSession();
+					 Transaction tx1 = session.beginTransaction();
+					 session.save(player);
+					 System.out.println("Saved data");
+					 tx1.commit();
+					 session.close();
 					
 				}
 				Iterator< PlayerDto> itr=array1.iterator();
