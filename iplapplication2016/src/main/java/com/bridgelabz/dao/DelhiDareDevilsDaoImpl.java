@@ -64,7 +64,7 @@ public class DelhiDareDevilsDaoImpl implements TeamDao {
 					while (itr.hasNext()) {
 						System.out.println(" in while");
 						System.out.println(itr.next());
-
+						
 					}
 				}
 			} catch (Exception e) {

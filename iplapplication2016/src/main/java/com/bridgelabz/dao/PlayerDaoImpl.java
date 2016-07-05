@@ -48,22 +48,25 @@ public class PlayerDaoImpl implements PlayerDao{
 					player.setDob(jsonObjectArray.get("player_dob").toString());
 					
 					 array1.add(player);
-						 //save  with transaction
-					 System.out.println("Entered in try block of save");
-					 Session session = sessionFactory.openSession();
-					 Transaction tx1 = session.beginTransaction();
-					 session.save(player);
-					 System.out.println("Saved data");
-					 tx1.commit();
-					 session.close();
-
+					 try{
+							//save  with transaction
+						 System.out.println("Entered in try block of save");
+						 Session session = sessionFactory.openSession();
+						 Transaction tx1 = session.beginTransaction();
+						 session.save(player);
+						 System.out.println("Saved data");
+						 tx1.commit();
+						 session.close();
+						}catch(Exception e){
+							e.printStackTrace();
+						}
 
 				}
 
         	}
         }
         	catch (Exception e) {
-        		System.out.println("error");
+        		System.out.println("File Reading or Duplication Error");
         	}
 	
 		return array1;
@@ -103,16 +106,18 @@ public class PlayerDaoImpl implements PlayerDao{
 					player.setDob(jsonObjectArray.get("player_dob").toString());
 					
 					 array1.add(player);
-					//save  with transaction
-					 System.out.println("Entered in try block of save");
-					 Session session = sessionFactory.openSession();
-					 Transaction tx1 = session.beginTransaction();
-					 session.save(player);
-					 System.out.println("Saved data");
-					 tx1.commit();
-					 session.close();
-
-
+					 try{
+							//save  with transaction
+						 System.out.println("Entered in try block of save");
+						 Session session = sessionFactory.openSession();
+						 Transaction tx1 = session.beginTransaction();
+						 session.save(player);
+						 System.out.println("Saved data");
+						 tx1.commit();
+						 session.close();
+						}catch(Exception e){
+							e.printStackTrace();
+						}
 					
 				}
 				Iterator< PlayerDto> itr=array1.iterator();
@@ -124,7 +129,7 @@ public class PlayerDaoImpl implements PlayerDao{
         	}
         }
         	catch (Exception e) {
-        		System.out.println("error");
+        		System.out.println("File Reading or Duplication Error");
         	}
 		return array1;
 	}
@@ -165,16 +170,18 @@ System.out.println("Gujrat list while be display shortly");
 					player.setDob(jsonObjectArray.get("player_dob").toString());
 					
 					 array1.add(player);
-					 //save  with transaction
-					 System.out.println("Entered in try block of save");
-					 Session session = sessionFactory.openSession();
-					 Transaction tx1 = session.beginTransaction();
-					 session.save(player);
-					 System.out.println("Saved data");
-					 tx1.commit();
-					 session.close();
-
-					
+					 try{
+							//save  with transaction
+						 System.out.println("Entered in try block of save");
+						 Session session = sessionFactory.openSession();
+						 Transaction tx1 = session.beginTransaction();
+						 session.save(player);
+						 System.out.println("Saved data");
+						 tx1.commit();
+						 session.close();
+						}catch(Exception e){
+							e.printStackTrace();
+						}
 				}
 				Iterator< PlayerDto> itr=array1.iterator();
 				while(itr.hasNext())
@@ -185,7 +192,7 @@ System.out.println("Gujrat list while be display shortly");
         	}
         }
         	catch (Exception e) {
-        		System.out.println("error");
+        		System.out.println("File Reading or Duplication Error");
         	}
 		return array1;
 	
@@ -228,16 +235,18 @@ System.out.println("Gujrat list while be display shortly");
 					player.setDob(jsonObjectArray.get("player_dob").toString());
 					
 					 array1.add(player);
-					 //save  with transaction
-					 System.out.println("Entered in try block of save");
-					 Session session = sessionFactory.openSession();
-					 Transaction tx1 = session.beginTransaction();
-					 session.save(player);
-					 System.out.println("Saved data");
-					 tx1.commit();
-					 session.close();
-
-
+					 try{
+							//save  with transaction
+						 System.out.println("Entered in try block of save");
+						 Session session = sessionFactory.openSession();
+						 Transaction tx1 = session.beginTransaction();
+						 session.save(player);
+						 System.out.println("Saved data");
+						 tx1.commit();
+						 session.close();
+						}catch(Exception e){
+							e.printStackTrace();
+						}
 					
 				}
 				Iterator< PlayerDto> itr=array1.iterator();
@@ -249,7 +258,7 @@ System.out.println("Gujrat list while be display shortly");
         	}
         }
         	catch (Exception e) {
-        		System.out.println("error");
+        		System.out.println("File Reading or Duplication Error");
         	}
 		return array1;
 	
@@ -287,16 +296,18 @@ System.out.println("Gujrat list while be display shortly");
 					player.setDob(jsonObjectArray.get("player_dob").toString());
 					
 					 array1.add(player);
-				 //save  with transaction
-					 System.out.println("Entered in try block of save");
-					 Session session = sessionFactory.openSession();
-					 Transaction tx1 = session.beginTransaction();
-					 session.save(player);
-					 System.out.println("Saved data");
-					 tx1.commit();
-					 session.close();
-
-
+					 try{
+							//save  with transaction
+						 System.out.println("Entered in try block of save");
+						 Session session = sessionFactory.openSession();
+						 Transaction tx1 = session.beginTransaction();
+						 session.save(player);
+						 System.out.println("Saved data");
+						 tx1.commit();
+						 session.close();
+						}catch(Exception e){
+							e.printStackTrace();
+						}
 					
 				}
 				Iterator< PlayerDto> itr=array1.iterator();
@@ -308,7 +319,7 @@ System.out.println("Gujrat list while be display shortly");
         	}
         }
         	catch (Exception e) {
-        		System.out.println("error");
+        		System.out.println("File Reading or Duplication Error");
         	}
 		return array1;
 	
@@ -347,15 +358,18 @@ System.out.println("Gujrat list while be display shortly");
 					player.setDob(jsonObjectArray.get("player_dob").toString());
 					
 					 array1.add(player);
-				 //save  with transaction
-					 System.out.println("Entered in try block of save");
-					 Session session = sessionFactory.openSession();
-					 Transaction tx1 = session.beginTransaction();
-					 session.save(player);
-					 System.out.println("Saved data");
-					 tx1.commit();
-					 session.close();
-
+					 try{
+							//save  with transaction
+						 System.out.println("Entered in try block of save");
+						 Session session = sessionFactory.openSession();
+						 Transaction tx1 = session.beginTransaction();
+						 session.save(player);
+						 System.out.println("Saved data");
+						 tx1.commit();
+						 session.close();
+						}catch(Exception e){
+							e.printStackTrace();
+						}
 					
 				}
 				Iterator< PlayerDto> itr=array1.iterator();
@@ -367,7 +381,7 @@ System.out.println("Gujrat list while be display shortly");
         	}
         }
         	catch (Exception e) {
-        		System.out.println("error");
+        		System.out.println("File Reading or Duplication Error");
         	}
 		return array1;
 		}
@@ -410,17 +424,18 @@ System.out.println("Gujrat list while be display shortly");
 					
 					 array1.add(player);
 				
-					 
-					 //save  with transaction
-					 System.out.println("Entered in try block of save");
-					 Session session = sessionFactory.openSession();
-					 Transaction tx1 = session.beginTransaction();
-					 session.save(player);
-					 System.out.println("Saved data");
-					 tx1.commit();
-					 session.close();
- 
-
+					 try{
+							//save  with transaction
+						 System.out.println("Entered in try block of save");
+						 Session session = sessionFactory.openSession();
+						 Transaction tx1 = session.beginTransaction();
+						 session.save(player);
+						 System.out.println("Saved data");
+						 tx1.commit();
+						 session.close();
+						}catch(Exception e){
+							e.printStackTrace();
+						}
 					
 				}
 				Iterator< PlayerDto> itr=array1.iterator();
@@ -432,7 +447,7 @@ System.out.println("Gujrat list while be display shortly");
         	}
         }
         	catch (Exception e) {
-        		System.out.println("error");
+        		System.out.println("File Reading or Duplication Error");
         	}
 		return array1;
 	
@@ -470,7 +485,8 @@ System.out.println("Gujrat list while be display shortly");
 					player.setDob(jsonObjectArray.get("player_dob").toString());
 					
 					 array1.add(player);
-						 //save  with transaction
+					try{
+						//save  with transaction
 					 System.out.println("Entered in try block of save");
 					 Session session = sessionFactory.openSession();
 					 Transaction tx1 = session.beginTransaction();
@@ -478,6 +494,9 @@ System.out.println("Gujrat list while be display shortly");
 					 System.out.println("Saved data");
 					 tx1.commit();
 					 session.close();
+					}catch(Exception e){
+						e.printStackTrace();
+					}
 				}
 				Iterator< PlayerDto> itr=array1.iterator();
 				while(itr.hasNext())
@@ -488,7 +507,7 @@ System.out.println("Gujrat list while be display shortly");
         	}
         }
         	catch (Exception e) {
-        		System.out.println("error");
+        		System.out.println("File Reading or Duplication Error");
         	}
 		return array1;
 	
