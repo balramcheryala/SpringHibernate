@@ -14,27 +14,21 @@
     display: inline-block;
     font-size: 16px;
     margin: 4px 2px;
-    cursor: pointer;
+    cursor: pointer; }
     
+.h1{color:blue;}
+.p{color:green;} 
 }
-</style>
-<style>
-h1   {color:blue;}
-p    {color:green;}
 </style>
 </head>
 
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <center><h1 style="color:#AD1874;">WELCOME TO IPL APPLICATION</h1></center> 
 <form action="loginform.html">
-<button type="submit"  class="button">IPL LOGIN &nbsp;  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</button>
+<center><button type="submit"  class="button">IPL LOGIN &nbsp;  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</button></center>
 </form>
 <form action="registrationform.html">
-<button type="submit"  class="button">IPL REGISTRATION</button>
+<center><button type="submit"  class="button">IPL REGISTRATION</button></center>
 </form>
-<!-- <form action="ipl.html">
-<button type="submit"  class="button">IPL HOME&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</button>
-</form> -->
-
 </body>
 </html>
