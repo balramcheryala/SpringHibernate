@@ -19,7 +19,7 @@ public class JsonController
 	@Autowired
 	private PlayerDaoImpl play;
 	@RequestMapping(value="/ipl.html",method = RequestMethod.GET)
-	public String showForm(Map model)
+	public String showForm(Map<?, ?> model)
 	{
 		return "iplhome";
 	}

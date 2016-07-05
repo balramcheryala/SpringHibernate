@@ -77,7 +77,7 @@ public class PlayerDaoImpl implements PlayerDao{
 	
 	
 	/*------gujrat player function------*/
-	public ArrayList gujratPlayerList() {
+	public ArrayList<PlayerDto> gujratPlayerList() {
 		System.out.println("Gujrat list while be display shortly");
 		
 		ArrayList<PlayerDto> array1=new ArrayList<PlayerDto>();
@@ -92,7 +92,7 @@ public class PlayerDaoImpl implements PlayerDao{
         	
         	for (int i = 0; i < array.size(); i++) {
 				JSONObject jsonObject=(JSONObject)array.get(i);
-				String name=jsonObject.get("Name").toString();
+				jsonObject.get("Name").toString();
 				JSONArray jsonArray=(JSONArray)jsonObject.get("GujratPlayerList");
 				
 				for (int j = 0; j < jsonArray.size(); j++) {
@@ -134,14 +134,10 @@ public class PlayerDaoImpl implements PlayerDao{
 		return array1;
 	}
 	
-	
-	
-	
-	
-	
+
 	
 	/*------punjab player function------*/
-	public ArrayList punjabPlayerList() {
+	public ArrayList<PlayerDto> punjabPlayerList() {
 System.out.println("Gujrat list while be display shortly");
 		
 		ArrayList<PlayerDto> array1=new ArrayList<PlayerDto>();
@@ -156,7 +152,7 @@ System.out.println("Gujrat list while be display shortly");
         	
         	for (int i = 0; i < array.size(); i++) {
 				JSONObject jsonObject=(JSONObject)array.get(i);
-				String name=jsonObject.get("Name").toString();
+				jsonObject.get("Name").toString();
 				JSONArray jsonArray=(JSONArray)jsonObject.get("PunjabPlayerList");
 				
 				for (int j = 0; j < jsonArray.size(); j++) {
@@ -206,7 +202,7 @@ System.out.println("Gujrat list while be display shortly");
 	
 	
 	/*------KKR player function------*/
-	public ArrayList kkrPlayerList() {
+	public ArrayList<PlayerDto> kkrPlayerList() {
 System.out.println("Gujrat list while be display shortly");
 		
 		ArrayList<PlayerDto> array1=new ArrayList<PlayerDto>();
@@ -221,7 +217,7 @@ System.out.println("Gujrat list while be display shortly");
         	
         	for (int i = 0; i < array.size(); i++) {
 				JSONObject jsonObject=(JSONObject)array.get(i);
-				String name=jsonObject.get("Name").toString();
+				jsonObject.get("Name").toString();
 				JSONArray jsonArray=(JSONArray)jsonObject.get("KKRPlayer");
 				
 				for (int j = 0; j < jsonArray.size(); j++) {
@@ -267,7 +263,7 @@ System.out.println("Gujrat list while be display shortly");
 	
 	
 	/*------mumbai indians player function------*/
-	public ArrayList mumbaiPlayerList() {
+	public ArrayList<PlayerDto> mumbaiPlayerList() {
 System.out.println("Gujrat list while be display shortly");
 		
 		ArrayList<PlayerDto> array1=new ArrayList<PlayerDto>();
@@ -282,7 +278,7 @@ System.out.println("Gujrat list while be display shortly");
         	
         	for (int i = 0; i < array.size(); i++) {
 				JSONObject jsonObject=(JSONObject)array.get(i);
-				String name=jsonObject.get("Name").toString();
+				jsonObject.get("Name").toString();
 				JSONArray jsonArray=(JSONArray)jsonObject.get("MumbaiPlayerList");
 				
 				for (int j = 0; j < jsonArray.size(); j++) {
@@ -329,7 +325,7 @@ System.out.println("Gujrat list while be display shortly");
 	
 	
 	/*------rising pune player function------*/
-	public ArrayList risingPunePlayerList() {
+	public ArrayList<PlayerDto> risingPunePlayerList() {
 System.out.println("Gujrat list while be display shortly");
 		
 		ArrayList<PlayerDto> array1=new ArrayList<PlayerDto>();
@@ -344,7 +340,7 @@ System.out.println("Gujrat list while be display shortly");
         	
         	for (int i = 0; i < array.size(); i++) {
 				JSONObject jsonObject=(JSONObject)array.get(i);
-				String name=jsonObject.get("Name").toString();
+				jsonObject.get("Name").toString();
 				JSONArray jsonArray=(JSONArray)jsonObject.get("PunePlayerList");
 				
 				for (int j = 0; j < jsonArray.size(); j++) {
@@ -394,7 +390,7 @@ System.out.println("Gujrat list while be display shortly");
 	
 	
 	/*------royal challenge player function------*/
-	public ArrayList royalChallengesPlayerList() {
+	public ArrayList<PlayerDto> royalChallengesPlayerList() {
 System.out.println("Gujrat list while be display shortly");
 		
 		ArrayList<PlayerDto> array1=new ArrayList<PlayerDto>();
@@ -409,7 +405,7 @@ System.out.println("Gujrat list while be display shortly");
         	
         	for (int i = 0; i < array.size(); i++) {
 				JSONObject jsonObject=(JSONObject)array.get(i);
-				String name=jsonObject.get("Name").toString();
+				jsonObject.get("Name").toString();
 				JSONArray jsonArray=(JSONArray)jsonObject.get("RoyalChallengePlayerList");
 				
 				for (int j = 0; j < jsonArray.size(); j++) {
@@ -456,7 +452,7 @@ System.out.println("Gujrat list while be display shortly");
 	
 	
 	/*------Sunrise hydrabad player function------*/
-	public ArrayList sunriseHydrabadPlayerList() {
+	public ArrayList<PlayerDto> sunriseHydrabadPlayerList() {
 System.out.println("Gujrat list while be display shortly");
 		
 		ArrayList<PlayerDto> array1=new ArrayList<PlayerDto>();
@@ -471,7 +467,7 @@ System.out.println("Gujrat list while be display shortly");
         	
         	for (int i = 0; i < array.size(); i++) {
 				JSONObject jsonObject=(JSONObject)array.get(i);
-				String name=jsonObject.get("Name").toString();
+				jsonObject.get("Name").toString();
 				JSONArray jsonArray=(JSONArray)jsonObject.get("SunRiseHydrabadPlayerList");
 				
 				for (int j = 0; j < jsonArray.size(); j++) {

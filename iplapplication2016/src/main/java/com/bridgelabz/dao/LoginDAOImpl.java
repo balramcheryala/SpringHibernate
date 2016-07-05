@@ -1,7 +1,6 @@
 package com.bridgelabz.dao;
 import com.bridgelabz.model.*;
 
-import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Repository;
 import javax.annotation.Resource;
 import org.hibernate.Session;
@@ -35,7 +34,7 @@ public class LoginDAOImpl implements LoginDAO{
 			Query query = session.createQuery(SQL_QUERY);
 			query.setParameter(0,userName);
 			query.setParameter(1,userPassword);
-			List list = query.list();
+			List<?> list = query.list();
 
 			if ((list != null) && (list.size() > 0)) {
 				userFound= true;
@@ -52,7 +51,7 @@ public class LoginDAOImpl implements LoginDAO{
     	   String sql_queri="from Users as o where o.email=?";
     	   Query queri=session1.createQuery(sql_queri);
 			queri.setParameter(0,email);
-			List list = queri.list();
+			List<?> list = queri.list();
 			if ((list != null) && (list.size() > 0)) 
 			{
 				userFound1= true;
@@ -69,7 +68,7 @@ public class LoginDAOImpl implements LoginDAO{
     	   String sql_queri="from Users as o where o.userName=?";
     	   Query queri=session1.createQuery(sql_queri);
 			queri.setParameter(0,userName);
-			List list = queri.list();
+			List<?> list = queri.list();
 			if ((list != null) && (list.size() > 0)) 
 			{
 				userFound1= true;

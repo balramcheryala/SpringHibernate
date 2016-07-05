@@ -3,7 +3,6 @@ package com.bridgelabz.dao;
 import java.io.FileReader;
 import java.util.ArrayList;
 import java.util.Iterator;
-
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
@@ -49,16 +48,18 @@ public class DelhiDareDevilsDaoImpl implements TeamDao {
 						DDplayer.setOwner(jsonObjectArray.get("team_owner").toString());
 
 							array1.add(DDplayer);
-							
-							//save  with transaction
-							 System.out.println("Entered in try block of save");
-							 Session session = sessionFactory.openSession();
-							 Transaction tx1 = session.beginTransaction();
-							 session.save(DDplayer);
-							 System.out.println("Saved data");
-							 tx1.commit();
-							 session.close();
-					
+							 try{
+									//save  with transaction
+								 System.out.println("Entered in try block of save");
+								 Session session = sessionFactory.openSession();
+								 Transaction tx1 = session.beginTransaction();
+								 session.save(DDplayer);
+								 System.out.println("Saved data");
+								 tx1.commit();
+								 session.close();
+								}catch(Exception e){
+									e.printStackTrace();
+								}
 					}
 					Iterator<TeamDto> itr = array1.iterator();
 					while (itr.hasNext()) {
@@ -106,6 +107,18 @@ public class DelhiDareDevilsDaoImpl implements TeamDao {
 					DDplayer.setOwner(jsonObjectArray.get("team_owner").toString());
 
 						array1.add(DDplayer);
+						 try{
+								//save  with transaction
+							 System.out.println("Entered in try block of save");
+							 Session session = sessionFactory.openSession();
+							 Transaction tx1 = session.beginTransaction();
+							 session.save(DDplayer);
+							 System.out.println("Saved data");
+							 tx1.commit();
+							 session.close();
+							}catch(Exception e){
+								e.printStackTrace();
+							}
 					
 				}
 				Iterator<TeamDto> itr = array1.iterator();
@@ -151,14 +164,18 @@ public class DelhiDareDevilsDaoImpl implements TeamDao {
 					DDplayer.setOwner(jsonObjectArray.get("team_owner").toString());
 
 						array1.add(DDplayer);
-						//save  with transaction
-						 System.out.println("Entered in try block of save");
-						 Session session = sessionFactory.openSession();
-						 Transaction tx1 = session.beginTransaction();
-						 session.save(DDplayer);
-						 System.out.println("Saved data");
-						 tx1.commit();
-						 session.close();
+						 try{
+								//save  with transaction
+							 System.out.println("Entered in try block of save");
+							 Session session = sessionFactory.openSession();
+							 Transaction tx1 = session.beginTransaction();
+							 session.save(DDplayer);
+							 System.out.println("Saved data");
+							 tx1.commit();
+							 session.close();
+							}catch(Exception e){
+								e.printStackTrace();
+							}
 				}
 				Iterator<TeamDto> itr = array1.iterator();
 				while (itr.hasNext()) {
@@ -203,14 +220,18 @@ public class DelhiDareDevilsDaoImpl implements TeamDao {
 					DDplayer.setOwner(jsonObjectArray.get("team_owner").toString());
 
 						array1.add(DDplayer);
-						//save  with transaction
-						 System.out.println("Entered in try block of save");
-						 Session session = sessionFactory.openSession();
-						 Transaction tx1 = session.beginTransaction();
-						 session.save(DDplayer);
-						 System.out.println("Saved data");
-						 tx1.commit();
-						 session.close();
+						 try{
+								//save  with transaction
+							 System.out.println("Entered in try block of save");
+							 Session session = sessionFactory.openSession();
+							 Transaction tx1 = session.beginTransaction();
+							 session.save(DDplayer);
+							 System.out.println("Saved data");
+							 tx1.commit();
+							 session.close();
+							}catch(Exception e){
+								e.printStackTrace();
+							}
 				}
 				Iterator<TeamDto> itr = array1.iterator();
 				while (itr.hasNext()) {
@@ -255,14 +276,18 @@ public class DelhiDareDevilsDaoImpl implements TeamDao {
 					DDplayer.setOwner(jsonObjectArray.get("team_owner").toString());
 
 						array1.add(DDplayer);
-						//save  with transaction
-						 System.out.println("Entered in try block of save");
-						 Session session = sessionFactory.openSession();
-						 Transaction tx1 = session.beginTransaction();
-						 session.save(DDplayer);
-						 System.out.println("Saved data");
-						 tx1.commit();
-						 session.close();
+						 try{
+								//save  with transaction
+							 System.out.println("Entered in try block of save");
+							 Session session = sessionFactory.openSession();
+							 Transaction tx1 = session.beginTransaction();
+							 session.save(DDplayer);
+							 System.out.println("Saved data");
+							 tx1.commit();
+							 session.close();
+							}catch(Exception e){
+								e.printStackTrace();
+							}
 				}
 				Iterator<TeamDto> itr = array1.iterator();
 				while (itr.hasNext()) {
@@ -307,14 +332,18 @@ public class DelhiDareDevilsDaoImpl implements TeamDao {
 					DDplayer.setOwner(jsonObjectArray.get("team_owner").toString());
 
 						array1.add(DDplayer);
-						//save  with transaction
-						 System.out.println("Entered in try block of save");
-						 Session session = sessionFactory.openSession();
-						 Transaction tx1 = session.beginTransaction();
-						 session.save(DDplayer);
-						 System.out.println("Saved data");
-						 tx1.commit();
-						 session.close();
+						 try{
+								//save  with transaction
+							 System.out.println("Entered in try block of save");
+							 Session session = sessionFactory.openSession();
+							 Transaction tx1 = session.beginTransaction();
+							 session.save(DDplayer);
+							 System.out.println("Saved data");
+							 tx1.commit();
+							 session.close();
+							}catch(Exception e){
+								e.printStackTrace();
+							}
 				}
 				Iterator<TeamDto> itr = array1.iterator();
 				while (itr.hasNext()) {
@@ -359,14 +388,18 @@ public class DelhiDareDevilsDaoImpl implements TeamDao {
 					DDplayer.setOwner(jsonObjectArray.get("team_owner").toString());
 
 						array1.add(DDplayer);
-						//save  with transaction
-						 System.out.println("Entered in try block of save");
-						 Session session = sessionFactory.openSession();
-						 Transaction tx1 = session.beginTransaction();
-						 session.save(DDplayer);
-						 System.out.println("Saved data");
-						 tx1.commit();
-						 session.close();
+						 try{
+								//save  with transaction
+							 System.out.println("Entered in try block of save");
+							 Session session = sessionFactory.openSession();
+							 Transaction tx1 = session.beginTransaction();
+							 session.save(DDplayer);
+							 System.out.println("Saved data");
+							 tx1.commit();
+							 session.close();
+							}catch(Exception e){
+								e.printStackTrace();
+							}
 				}
 				Iterator<TeamDto> itr = array1.iterator();
 				while (itr.hasNext()) {
@@ -411,14 +444,18 @@ public class DelhiDareDevilsDaoImpl implements TeamDao {
 					DDplayer.setOwner(jsonObjectArray.get("team_owner").toString());
 
 						array1.add(DDplayer);
-						//save  with transaction
-						 System.out.println("Entered in try block of save");
-						 Session session = sessionFactory.openSession();
-						 Transaction tx1 = session.beginTransaction();
-						 session.save(DDplayer);
-						 System.out.println("Saved data");
-						 tx1.commit();
-						 session.close();
+						 try{
+								//save  with transaction
+							 System.out.println("Entered in try block of save");
+							 Session session = sessionFactory.openSession();
+							 Transaction tx1 = session.beginTransaction();
+							 session.save(DDplayer);
+							 System.out.println("Saved data");
+							 tx1.commit();
+							 session.close();
+							}catch(Exception e){
+								e.printStackTrace();
+							}
 				}
 				Iterator<TeamDto> itr = array1.iterator();
 				while (itr.hasNext()) {

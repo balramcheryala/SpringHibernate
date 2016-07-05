@@ -2,7 +2,7 @@
 	pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
-<head><center>
+<head>
 <style>
 .button {
     background-color: #4CAF50;
@@ -25,7 +25,7 @@ p    {color:green;}
 </head>
 
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<h1 style="color:#AD1874;"><b><center>WELCOME TO IPL APPLICATION</center> </b></h1>
+<center><h1 style="color:#AD1874;">WELCOME TO IPL APPLICATION</h1></center> 
 <form action="loginform.html">
 <button type="submit"  class="button">IPL LOGIN &nbsp;  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</button>
 </form>
@@ -36,7 +36,5 @@ p    {color:green;}
 <button type="submit"  class="button">IPL HOME&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</button>
 </form> -->
 
-</body></center>
-</html>
-
+</body>
 </html>

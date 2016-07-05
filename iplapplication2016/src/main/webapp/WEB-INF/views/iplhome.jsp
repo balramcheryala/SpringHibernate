@@ -69,15 +69,16 @@ table {
 </style>
 </head>
 <center>
-		<td><I><strong><h1 style="color:green;">Welcome To IPL Home Page</h1></strong></I></td>
+
+		<h1 style="color:green;"><I><strong>Welcome To IPL Home Page</strong></I></h1>
 		<br>
 	</center>
 	<table border="1" align="center" width="75%">
 	<tr>
-		<th colspan="4"><I><strong><h3><b>IPL 2016 Teams</b></h3></strong></th>
+		<th colspan="4"><h3><I><strong><b>IPL 2016 Teams</b></strong></I></h3></th>
 	</tr>
 	<tr>
-		<td><I><strong><h5 style="color:#900C3F;">DELHI DAREDEVILS</h5></I></strong></td>
+		<td><h5 style="color:#900C3F;"><I><strong>DELHI DAREDEVILS</strong></I></h5></td>
 		<td>
 			<form action="ddteamview">
 				<button type="submit" class="View  Team Info">Team Information</button>
@@ -87,7 +88,7 @@ table {
 		
 		<td>
 			<form action="ddplayerview">
-				<button type="submit" class="View Player Info">Player Inforamtion</button>
+				<button type="submit" class="View Player Info">Player Information</button>
 			</form>
 		</td>
 	<td>
@@ -107,7 +108,7 @@ table {
 		</td>
 		<td>
 			<form action="glplayerview">
-				<button type="submit" class="View Player Info">Player Inforamtion</button>
+				<button type="submit" class="View Player Info">Player Information</button>
 			</form>
 		</td>
 <td>
@@ -118,7 +119,7 @@ table {
 	</tr>
 	
 	<tr>
-<td><I><strong><h5 style="color:#900C3F;">KING XI PANJAB</td>
+<td><h5 style="color:#900C3F;"><I><strong>KING XI PANJAB</strong></I></h5></td>
 		<td>
 			<form action="kpteamview">
 				<button type="submit" class="View  Team Info">Team Information</button>
@@ -137,7 +138,7 @@ table {
 	</tr>
 	
 	<tr>
-		<td><I><strong><h5>KOLKATA KNIGHT RIDERS</td>
+		<td><h5><I><strong>KOLKATA KNIGHT RIDERS</strong></I></h5></td>
 		<td>
 			<form action="kkrteamview">
 				<button type="submit" class="View  Team Info">Team Information</button>
@@ -156,7 +157,7 @@ table {
 	</tr>
 	
 	<tr>
-<td><I><strong><h5 style="color:#900C3F;">MUMBAI INDIANS</td>
+<td><h5 style="color:#900C3F;"><I><strong>MUMBAI INDIANS</strong></I></h5></td>
 		<td>
 			<form action="mumbaiteamview">
 				<button type="submit" class="View  Team Info">Team Information</button>
@@ -164,7 +165,7 @@ table {
 		</td>
 		<td>
 			<form action="mumbaiplayerview">
-				<button type="submit" class="View Player Info">Player Inforamtion</button>
+				<button type="submit" class="View Player Info">Player Information</button>
 			</form>
 		</td>
 <td>
@@ -175,7 +176,7 @@ table {
 	</tr>
 	
 	<tr>
-		<td><I><strong><h5>RISING PUNE SUPER GIANTS</h5></strong></I> </td>
+		<td><h5><I><strong>RISING PUNE SUPER GIANTS</strong></I></h5></td>
 		<td>
 			<form action="puneteamview">
 				<button type="submit" class="View  Team Info">Team Information</button>
@@ -193,7 +194,7 @@ table {
 		</td>
 	</tr>
 	<tr>
-<td><I><strong><h5 style="color:#900C3F;">ROYAL CHALANGERS BANGLORE </h5></strong></I></td>
+<td><h5 style="color:#900C3F;"><I><strong>ROYAL CHALANGERS BANGLORE </strong></I></h5></td>
 		<td>
 			<form action="rcbteamview">
 				<button type="submit" class="View  Team Info">Team Information</button>
@@ -212,7 +213,7 @@ table {
 	</tr>
 	
 	<tr>
-		<td><I><strong><h5>SUNRISERS HYDERABAD </h5></strong></I></td>
+		<td><h5><I><strong>SUNRISERS HYDERABAD </strong></I></h5></td>
 		<td>
 			<form action="sunriseteamview">
 				<button type="submit" class="View  Team Info">Team Information</button>

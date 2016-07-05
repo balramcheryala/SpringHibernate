@@ -73,5 +73,6 @@ table {
 			</c:forEach>
 		</table>
 		<br />
+		</form>
 </body>
 </html>

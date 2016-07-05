@@ -42,8 +42,7 @@
 		<tr>
 			<td><button type="submit"  class="button">Login User</button></td>
 		</tr>
-	</table>
+	</table></body>
 </form:form>
-</body>
 </center>
 </html>

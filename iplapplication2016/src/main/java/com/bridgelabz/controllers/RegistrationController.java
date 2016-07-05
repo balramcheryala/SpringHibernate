@@ -1,5 +1,4 @@
 package com.bridgelabz.controllers;
-
 import java.util.Map;
 import javax.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -8,8 +7,6 @@ import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.servlet.ModelAndView;
-
 import com.bridgelabz.form.Registration;
 import com.bridgelabz.model.Users;
 import com.bridgelabz.service.LoginService;
@@ -33,7 +30,7 @@ public class RegistrationController {
 	private LoginService employeeService;
 	@RequestMapping(method = RequestMethod.POST)
 	public String saveEmployee(@ModelAttribute("registration") @Valid Registration registration, 
-			BindingResult result,Map model) {
+			BindingResult result,Map<?, ?> model) {
 		// set custom Validation for Email
 				registrationValidation.validate(registration, result);
 				if (result.hasErrors()) 
@@ -65,7 +62,7 @@ public class RegistrationController {
 		
 	// Display the form on the get request
 	@RequestMapping(method = RequestMethod.GET)
-	public String showRegistration(Map model) {
+	public String showRegistration(Map<String, Registration> model) {
 		Registration registration = new Registration();
 		model.put("registration", registration);
 		return "registrationform";

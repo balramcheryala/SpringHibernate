@@ -67,6 +67,5 @@
 		</tr>
 	</table>
 </form:form>
-</body>
-</center>
+</center></body>
 </html>
