@@ -49,12 +49,12 @@ table {
 	<form action="playerlist" method="post">
 		<table border="1" cellpadding="2" width="70%">
 			<tr>
-				<th>NAME</th>
-				<th>ROLE</th>
-				<th>BATTING</th>
-				<th>BOWLING</th>
-				<th>NATION</th>
-				<th>DATE OF BIRTH</th>
+				<th><a href="search?by=name&q=">NAME</a></th>
+				<th><a href="search?by=role&q=">ROLE</a></th>
+				<th><a href="search?by=batting&q=">BATTING</a></th>
+				<th><a href="search?by=bowler&q=">BOWLING</a></th>
+				<th><a href="search?by=nation&q=">NATION</a></th>
+				<th><a href="search?by=dob&q=">DATE OF BIRTH</a></th>
 			</tr>
 			<c:forEach var="playerlist" items="${playerlist}">
 
@@ -67,7 +67,7 @@ table {
 					<td>${playerlist.dob}</td>
 
 					<%-- <td><a href="editemp/${playerlist.id}">Edit</a></td>
-<td><a href="deleteemp/${playerlist.id}">Delete</a></td> --%>
+<td><a href="deleteemp/${search?by=dob&q=}">Delete</a></td> --%>
 				</tr>
 
 			</c:forEach>

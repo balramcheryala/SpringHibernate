@@ -1,5 +1,9 @@
 package com.bridgelabz.model;
 
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -25,8 +29,9 @@ public class PlayerDto {
 	@Column(name = "nation")
 	private String nation;
 	@Column(name = "dob" )
-	private String dob;
+	private Date dob;
 	
+
 	public String getName() {
 		return name;
 	}
@@ -58,9 +63,10 @@ public class PlayerDto {
 		this.nation = nation;
 	}
 	public String getDob() {
-		return dob;
+		DateFormat df = new SimpleDateFormat("dd MMMM yyyy");
+		return df.format(dob);
 	}
-	public void setDob(String dob) {
+	public void setDob(Date dob) {
 		this.dob = dob;
 	}
 	

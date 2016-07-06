@@ -26,7 +26,7 @@ public class DelhiDareDevilsDaoImpl implements TeamDao {
 			try {
 
 				FileReader fileread = new FileReader(
-						"/home/bridgelabz/Documents/iplapplication2016/src/main/jsonfile/IPLTeam/DDTeamInfo.json");
+						"/home/bridgelabz/Downloads/iplapplication2016/src/main/jsonfile/IPLTeam/DDTeamInfo.json");
 
 				Object obj = parser.parse(fileread);
 				JSONArray array = (JSONArray) obj;
@@ -85,7 +85,7 @@ public class DelhiDareDevilsDaoImpl implements TeamDao {
 		try {
 
 			FileReader fileread = new FileReader(
-					"/home/bridgelabz/Documents/iplapplication2016/src/main/jsonfile/IPLTeam/GujratTeam.json");
+					"/home/bridgelabz/Downloads/iplapplication2016/src/main/jsonfile/IPLTeam/GujratTeam.json");
 
 			Object obj = parser.parse(fileread);
 			JSONArray array = (JSONArray) obj;
@@ -142,7 +142,7 @@ public class DelhiDareDevilsDaoImpl implements TeamDao {
 		try {
 
 			FileReader fileread = new FileReader(
-					"/home/bridgelabz/Documents/iplapplication2016/src/main/jsonfile/IPLTeam/PunjabTeam.json");
+					"/home/bridgelabz/Downloads/iplapplication2016/src/main/jsonfile/IPLTeam/PunjabTeam.json");
 
 			Object obj = parser.parse(fileread);
 			JSONArray array = (JSONArray) obj;
@@ -198,7 +198,7 @@ public class DelhiDareDevilsDaoImpl implements TeamDao {
 		try {
 
 			FileReader fileread = new FileReader(
-					"/home/bridgelabz/Documents/iplapplication2016/src/main/jsonfile/IPLTeam/KKRTeam.json");
+					"/home/bridgelabz/Downloads/iplapplication2016/src/main/jsonfile/IPLTeam/KKRTeam.json");
 
 			Object obj = parser.parse(fileread);
 			JSONArray array = (JSONArray) obj;
@@ -254,7 +254,7 @@ public class DelhiDareDevilsDaoImpl implements TeamDao {
 		try {
 
 			FileReader fileread = new FileReader(
-					"/home/bridgelabz/Documents/iplapplication2016/src/main/jsonfile/IPLTeam/MumbaiIndians.json");
+					"/home/bridgelabz/Downloads/iplapplication2016/src/main/jsonfile/IPLTeam/MumbaiIndians.json");
 
 			Object obj = parser.parse(fileread);
 			JSONArray array = (JSONArray) obj;
@@ -310,7 +310,7 @@ public class DelhiDareDevilsDaoImpl implements TeamDao {
 		try {
 
 			FileReader fileread = new FileReader(
-					"/home/bridgelabz/Documents/iplapplication2016/src/main/jsonfile/IPLTeam/RisingPune.json");
+					"/home/bridgelabz/Downloads/iplapplication2016/src/main/jsonfile/IPLTeam/RisingPune.json");
 
 			Object obj = parser.parse(fileread);
 			JSONArray array = (JSONArray) obj;
@@ -366,7 +366,7 @@ public class DelhiDareDevilsDaoImpl implements TeamDao {
 		try {
 
 			FileReader fileread = new FileReader(
-					"/home/bridgelabz/Documents/iplapplication2016/src/main/jsonfile/IPLTeam/RoyalChallenges.json");
+					"/home/bridgelabz/Downloads/iplapplication2016/src/main/jsonfile/IPLTeam/RoyalChallenges.json");
 
 			Object obj = parser.parse(fileread);
 			JSONArray array = (JSONArray) obj;
@@ -422,7 +422,7 @@ public class DelhiDareDevilsDaoImpl implements TeamDao {
 		try {
 
 			FileReader fileread = new FileReader(
-					"/home/bridgelabz/Documents/iplapplication2016/src/main/jsonfile/IPLTeam/SunriseHydrabad.json");
+					"/home/bridgelabz/Downloads/iplapplication2016/src/main/jsonfile/IPLTeam/SunriseHydrabad.json");
 
 			Object obj = parser.parse(fileread);
 			JSONArray array = (JSONArray) obj;

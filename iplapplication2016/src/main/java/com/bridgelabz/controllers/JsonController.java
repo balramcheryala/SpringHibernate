@@ -1,11 +1,20 @@
 package com.bridgelabz.controllers;
 
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
+
+import org.hibernate.Query;
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.servlet.ModelAndView;
 
 import com.bridgelabz.dao.DelhiDareDevilsDaoImpl;
 import com.bridgelabz.dao.PlayerDaoImpl;
@@ -18,11 +27,35 @@ public class JsonController
 	private DelhiDareDevilsDaoImpl ddplayer;
 	@Autowired
 	private PlayerDaoImpl play;
+	@Autowired
+	public SessionFactory sessionfactory;
 	@RequestMapping(value="/ipl.html",method = RequestMethod.GET)
 	public String showForm(Map<?, ?> model)
 	{
 		return "iplhome";
 	}
+	// Searching 
+	@RequestMapping(value="/search", method = RequestMethod.GET)
+	public ModelAndView searchbyname(@RequestParam(value="by", required=true) String by,@RequestParam(value="q", required=true) String query) 
+	{
+		Map<String, Object> model = new HashMap<String, Object>();
+		System.out.println(by);
+		System.out.println(query);
+		model.put("playerlist", play.jsonsearch(by,query));
+		return new ModelAndView("playerlist",model);
+		
+	}
+	
+	// sorting
+	@RequestMapping(value="/sort", method = RequestMethod.GET)
+	public ModelAndView searchforanything(@RequestParam(value="sortby", required=true) String fieldName) 
+	{
+		
+			Map<String, Object> model = new HashMap<String, Object>();
+			model.put("playerlist", play.jsonsorting( fieldName));
+			return new ModelAndView("playerlist",model);
+			
+		}
 	
 	//--------display the Delhi DareDevils team list-------- 
 	@RequestMapping("ddteamview")
