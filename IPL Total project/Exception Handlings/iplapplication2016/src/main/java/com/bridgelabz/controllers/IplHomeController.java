@@ -33,25 +33,8 @@ public class IplHomeController
 		return new ModelAndView ("iplhome");
 	}
 	
-	/*@ExceptionHandler({SpringException.class})
-	@RequestMapping(value="/**",method = RequestMethod.GET)
-	public String errorPage()
-	
-	{
-		throw new SpringException("Sorry The Resource Path not found ");
-     
-		
-	}*/
-	@ResponseStatus(value=HttpStatus.NOT_FOUND, reason="Data NOT_FOUND")
-	@ExceptionHandler({SpringException.class})
-	@RequestMapping(value="/**",method = RequestMethod.GET)
-	  public ModelAndView databaseError(Model m) {
-		throw new SpringException("Sorry The Resource Path not found ");
-		
-	  }
 	
 	// Searching 
-	@ExceptionHandler({SpringException.class})
 	@RequestMapping(value="/search", method = RequestMethod.GET)
 	public ModelAndView searchbyname(@RequestParam(value="by", required=true) String by,@RequestParam(value="q", required=true) String query) 
 	{
@@ -69,9 +52,7 @@ public class IplHomeController
 		
 	}
 	
-	
 	// sorting
-	@ExceptionHandler({SpringException.class})
 	@RequestMapping(value="/sort", method = RequestMethod.GET,produces = "application/json")
 	public ModelAndView searchforanything(@RequestParam(value="sortby", required=true) String fieldName) 
 	{
